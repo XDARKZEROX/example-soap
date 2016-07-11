@@ -43,7 +43,7 @@
         <wsdl:documentation>WSDL File for HelloService</wsdl:documentation>
         <wsdl:port binding="tns:Hello_Binding" name="Hello_Port">
             <soap:address
-                    location="http://localhost:5000/wsdl"/>
+                    location="https://example-soap.herokuapp.com/wsdl"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>
