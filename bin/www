@@ -13,7 +13,7 @@ var helloService = {
   Hello_Service: {
     Hello_Port: {
       sayHello: function(args) {
-        console.log(args.firstName.$value);
+        console.log(args);
         return {
           greeting: "Hello!!!"+ " " + args.firstName.$value
         };
@@ -23,8 +23,6 @@ var helloService = {
 };
 
 var xml = require('fs').readFileSync('resources/globalweather.wsdl', 'utf8');
-
-
 
 /**
  * Get port from environment and store in Express.
@@ -47,7 +45,7 @@ server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
-soap.listen(server, '/testing', helloService, xml);
+soap.listen(server, '/wsdl', helloService, xml);
 
 /**
  * Normalize a port into a number, string, or false.
